@@ -1,0 +1,493 @@
+schema: '2.0'
+stages:
+  download_data:
+    cmd: Rscript R/download.R
+    deps:
+    - path: R/download.R
+      md5: b9ceb3d715f49ff35cf08c1b65f16aa1
+      size: 6558
+    outs:
+    - path: data/Analysis_Table_of_Contents.parquet
+      md5: 74311761d198aaf69e809bd28b6ec24b
+      size: 98857
+    - path: data/PheGenIDump.20170814.parquet
+      md5: c4cd1d6d4b86e887981e590c92a885b9
+      size: 5810230
+    - path: data/analysisGrouping.parquet
+      md5: 07b84866529bfc67a30baf18f684d709
+      size: 142860
+    - path: data/datasetGrouping.parquet
+      md5: 192bdd9a89b48ce3b5c35d607f01824c
+      size: 783971
+    - path: data/dbGaP_combined_file_chunk_1.parquet
+      md5: 04078d10c13fd0010effb93ffc446711
+      size: 420357404
+    - path: data/dbGaP_combined_file_chunk_10.parquet
+      md5: 11a3575068e00969a382923b540ca90a
+      size: 313073961
+    - path: data/dbGaP_combined_file_chunk_100.parquet
+      md5: cf4efbf6ae34c34bd3cb88786ae2cef1
+      size: 263030848
+    - path: data/dbGaP_combined_file_chunk_101.parquet
+      md5: b1c71555a11594df660531ac1ea8ed3a
+      size: 419784118
+    - path: data/dbGaP_combined_file_chunk_102.parquet
+      md5: a265cd5092fe5577e6f7c8e67de7cba5
+      size: 293419739
+    - path: data/dbGaP_combined_file_chunk_103.parquet
+      md5: 4ca19ae50f9288d21abe8f185945da88
+      size: 394198974
+    - path: data/dbGaP_combined_file_chunk_104.parquet
+      md5: acdb6f5f5c41481d39ff6b038221ad54
+      size: 290492773
+    - path: data/dbGaP_combined_file_chunk_105.parquet
+      md5: d6679b684a34ed46d256ab4b71844a6e
+      size: 452393987
+    - path: data/dbGaP_combined_file_chunk_106.parquet
+      md5: 98453e98a350afc71cccbe96ee08caf5
+      size: 341245593
+    - path: data/dbGaP_combined_file_chunk_107.parquet
+      md5: f53af0480389bdd95609aba649c4750a
+      size: 477023452
+    - path: data/dbGaP_combined_file_chunk_108.parquet
+      md5: c51319a5235880c68ea0958e1423392d
+      size: 276706521
+    - path: data/dbGaP_combined_file_chunk_109.parquet
+      md5: 24e71f21d4f67371116cbccda9a77258
+      size: 440656435
+    - path: data/dbGaP_combined_file_chunk_11.parquet
+      md5: a2f470e14d4d61e7071086c2edfac619
+      size: 433225467
+    - path: data/dbGaP_combined_file_chunk_110.parquet
+      md5: a1746ef1256b3960267dbb6437271285
+      size: 266434083
+    - path: data/dbGaP_combined_file_chunk_111.parquet
+      md5: ca6baae167cc9e7929f6078d94e508c1
+      size: 411973142
+    - path: data/dbGaP_combined_file_chunk_112.parquet
+      md5: 039a1917dc69653c63872e6483d80ada
+      size: 401186947
+    - path: data/dbGaP_combined_file_chunk_113.parquet
+      md5: 2c8b522df47fee63339d892d0ee75b8c
+      size: 624789472
+    - path: data/dbGaP_combined_file_chunk_114.parquet
+      md5: eaa591b895833dcd2953aa422c42b006
+      size: 430112030
+    - path: data/dbGaP_combined_file_chunk_115.parquet
+      md5: dc6dfdbf37509a4bfcf4185094bf1a5e
+      size: 606831537
+    - path: data/dbGaP_combined_file_chunk_116.parquet
+      md5: ccfecf5cd732b86bc83978dac16763cc
+      size: 287930630
+    - path: data/dbGaP_combined_file_chunk_117.parquet
+      md5: b3478e82a0541cc350272025c2c6f4ba
+      size: 363853726
+    - path: data/dbGaP_combined_file_chunk_118.parquet
+      md5: 747bb90fc9d33f84233751e58636fffc
+      size: 289242882
+    - path: data/dbGaP_combined_file_chunk_119.parquet
+      md5: 149aac5f29e1773e84ff52a919b728c0
+      size: 411671802
+    - path: data/dbGaP_combined_file_chunk_12.parquet
+      md5: 9391db24d62fac9b73166fabd765b698
+      size: 309892994
+    - path: data/dbGaP_combined_file_chunk_120.parquet
+      md5: a4d804b8704407c337f9e2fabb082c2d
+      size: 368478047
+    - path: data/dbGaP_combined_file_chunk_121.parquet
+      md5: 879a3ecc3e588ddb31469d8f16e178f1
+      size: 485562334
+    - path: data/dbGaP_combined_file_chunk_122.parquet
+      md5: 6f70bf84bcaee824bc9490a48b7bede0
+      size: 386583260
+    - path: data/dbGaP_combined_file_chunk_123.parquet
+      md5: 66c8ceca2bc5ec3f8ac3b4e28d387986
+      size: 489663622
+    - path: data/dbGaP_combined_file_chunk_124.parquet
+      md5: 7aa6ee7ecd4f2422f65207a0abf4e10a
+      size: 321967901
+    - path: data/dbGaP_combined_file_chunk_125.parquet
+      md5: eb9990b3cdefe03e1237ca6d0f8a781a
+      size: 460418144
+    - path: data/dbGaP_combined_file_chunk_126.parquet
+      md5: a391ab03fee04c076b2a42b0614d41b5
+      size: 280886406
+    - path: data/dbGaP_combined_file_chunk_127.parquet
+      md5: ef5d21fad87b8902a0719382606e9aef
+      size: 464120523
+    - path: data/dbGaP_combined_file_chunk_128.parquet
+      md5: 3f5a8b719d8893a145b9709e4eff8710
+      size: 307159588
+    - path: data/dbGaP_combined_file_chunk_129.parquet
+      md5: 825877822a74bab276d6552b0d219ee8
+      size: 417495887
+    - path: data/dbGaP_combined_file_chunk_13.parquet
+      md5: 693e70aeaa31d9ef96475558697b6f6d
+      size: 434832141
+    - path: data/dbGaP_combined_file_chunk_130.parquet
+      md5: ec1465271217089808ecdea5334a74c0
+      size: 271576415
+    - path: data/dbGaP_combined_file_chunk_131.parquet
+      md5: 19ead06bc1637222d87d931f4aaa88c0
+      size: 426548552
+    - path: data/dbGaP_combined_file_chunk_132.parquet
+      md5: 3327be0b182449b5658a2ac4070b95e1
+      size: 287625554
+    - path: data/dbGaP_combined_file_chunk_133.parquet
+      md5: d8fbc3e3c369a9cde901485b7c44fd2b
+      size: 416716198
+    - path: data/dbGaP_combined_file_chunk_134.parquet
+      md5: 08f7dba6971b85b85801bbd91aa69566
+      size: 289891904
+    - path: data/dbGaP_combined_file_chunk_135.parquet
+      md5: 742322652cb729a97e94b61849e87ff4
+      size: 427747381
+    - path: data/dbGaP_combined_file_chunk_136.parquet
+      md5: 9adf47836ad8671f7a6e3b4d7da5cbd0
+      size: 316385730
+    - path: data/dbGaP_combined_file_chunk_137.parquet
+      md5: c6efd29cc37431b42af0ec4b0f237762
+      size: 466429662
+    - path: data/dbGaP_combined_file_chunk_138.parquet
+      md5: 69a83323d0333345c4341774ad627868
+      size: 295296840
+    - path: data/dbGaP_combined_file_chunk_139.parquet
+      md5: db93dc85139589f62b12810aab18bdfe
+      size: 460631879
+    - path: data/dbGaP_combined_file_chunk_14.parquet
+      md5: a12cd449b4288badd037de100a718f31
+      size: 313624382
+    - path: data/dbGaP_combined_file_chunk_140.parquet
+      md5: 7219efae91a4765010b5ebdf79a3568f
+      size: 334982603
+    - path: data/dbGaP_combined_file_chunk_141.parquet
+      md5: cbb4f700b009d037b027f10c50fe03ac
+      size: 438121792
+    - path: data/dbGaP_combined_file_chunk_142.parquet
+      md5: f7dc2de74320920db8f71222c2f68402
+      size: 308662487
+    - path: data/dbGaP_combined_file_chunk_143.parquet
+      md5: 6bbe4b04fb5e8a1a111f42a569e3395b
+      size: 428917796
+    - path: data/dbGaP_combined_file_chunk_144.parquet
+      md5: cbdac444cbfe2c6520e8344f83e78b31
+      size: 299993981
+    - path: data/dbGaP_combined_file_chunk_145.parquet
+      md5: 3fc492691df0ca2dfc8ea49c844225d8
+      size: 476252506
+    - path: data/dbGaP_combined_file_chunk_146.parquet
+      md5: 41be66fcb850810247f083b6388a3efa
+      size: 313254189
+    - path: data/dbGaP_combined_file_chunk_147.parquet
+      md5: e73646e5d722683429efd86dcbbd661d
+      size: 389731068
+    - path: data/dbGaP_combined_file_chunk_148.parquet
+      md5: cbcaea908aff67082b68613c1c22ce75
+      size: 290216359
+    - path: data/dbGaP_combined_file_chunk_149.parquet
+      md5: 114450fe01223c73f42f2313ee725d1d
+      size: 409270130
+    - path: data/dbGaP_combined_file_chunk_15.parquet
+      md5: 8a14c65dd9b8d7e783eca1764bc1323a
+      size: 433285957
+    - path: data/dbGaP_combined_file_chunk_150.parquet
+      md5: cb51f677c3eb630647b737bcbc14508c
+      size: 264808046
+    - path: data/dbGaP_combined_file_chunk_16.parquet
+      md5: ff1ad6db0c393857cf080fba55778bf2
+      size: 282730774
+    - path: data/dbGaP_combined_file_chunk_17.parquet
+      md5: 8e3fc2c95cbac6240f64c58dc38d6451
+      size: 403547624
+    - path: data/dbGaP_combined_file_chunk_18.parquet
+      md5: 633ea931dc2d213db95fd0fefd9e0ad0
+      size: 283447182
+    - path: data/dbGaP_combined_file_chunk_19.parquet
+      md5: 3afd333ff940345ce1c249b0cf02b5e4
+      size: 442831069
+    - path: data/dbGaP_combined_file_chunk_2.parquet
+      md5: 863b0193c6f5f11603ac812db71e6bc9
+      size: 276386571
+    - path: data/dbGaP_combined_file_chunk_20.parquet
+      md5: 8bd0480fa497e3899077bf4ade7d5381
+      size: 274557178
+    - path: data/dbGaP_combined_file_chunk_21.parquet
+      md5: ff34bffbb660bd2706fbe7af6a6a2dcf
+      size: 429467744
+    - path: data/dbGaP_combined_file_chunk_22.parquet
+      md5: f76cdf2c1ca8661b88f678cd017c06fd
+      size: 294956376
+    - path: data/dbGaP_combined_file_chunk_23.parquet
+      md5: d325172826816fac5b1dea1984754428
+      size: 456041942
+    - path: data/dbGaP_combined_file_chunk_24.parquet
+      md5: 06aee2633feb1797a2befdb51fb3eaf8
+      size: 306714875
+    - path: data/dbGaP_combined_file_chunk_25.parquet
+      md5: 7b9d00a5fca0c39c60953bdd392abd78
+      size: 478767906
+    - path: data/dbGaP_combined_file_chunk_26.parquet
+      md5: 87ede817d1fdb35d978a9ca3d5f29e3c
+      size: 310776835
+    - path: data/dbGaP_combined_file_chunk_27.parquet
+      md5: 0a133aacf2899c7f5fb672bed559c479
+      size: 417341278
+    - path: data/dbGaP_combined_file_chunk_28.parquet
+      md5: d81cca1c254c9a5f2ebef6f7930b896d
+      size: 310411375
+    - path: data/dbGaP_combined_file_chunk_29.parquet
+      md5: 152adfac2c76f2b6ce2dca215d3b23b9
+      size: 455555872
+    - path: data/dbGaP_combined_file_chunk_3.parquet
+      md5: 7d046d90a3fb43d14a7dd06e89b9eee6
+      size: 438448646
+    - path: data/dbGaP_combined_file_chunk_30.parquet
+      md5: d720549a7c172a5b8b93dcc045728821
+      size: 317172008
+    - path: data/dbGaP_combined_file_chunk_31.parquet
+      md5: c381fe0366cd79651f2088d803c25e66
+      size: 460101277
+    - path: data/dbGaP_combined_file_chunk_32.parquet
+      md5: 4969456b20da11d2093a23eb9f8418b5
+      size: 318077227
+    - path: data/dbGaP_combined_file_chunk_33.parquet
+      md5: 114e43fc7265be1a520be3964c7fd697
+      size: 449176234
+    - path: data/dbGaP_combined_file_chunk_34.parquet
+      md5: 2224108c5674e92a6ba2255789c00391
+      size: 281516144
+    - path: data/dbGaP_combined_file_chunk_35.parquet
+      md5: d6b57663a23ecd6964f8117e777cf824
+      size: 401176677
+    - path: data/dbGaP_combined_file_chunk_36.parquet
+      md5: 81c3a36d6cf4ff2b3599049071a99e61
+      size: 295626999
+    - path: data/dbGaP_combined_file_chunk_37.parquet
+      md5: 7becf15510934a5a06e0e7853c7e70df
+      size: 448550741
+    - path: data/dbGaP_combined_file_chunk_38.parquet
+      md5: b207935cb2685524153bbdf9082dc3e7
+      size: 277353872
+    - path: data/dbGaP_combined_file_chunk_39.parquet
+      md5: 1108079375a2f6f3c831c0adcfd27f1a
+      size: 450879596
+    - path: data/dbGaP_combined_file_chunk_4.parquet
+      md5: a427abdcbbe1b0f0831c52dd882e7847
+      size: 313353862
+    - path: data/dbGaP_combined_file_chunk_40.parquet
+      md5: 60de0e5334cc22bb6f5e611ce9ae87dd
+      size: 321858622
+    - path: data/dbGaP_combined_file_chunk_41.parquet
+      md5: b33eea963408d5cbd196b9bcef4dbf34
+      size: 461924035
+    - path: data/dbGaP_combined_file_chunk_42.parquet
+      md5: 5561a3e20d5481fdf3e63d69e8766d7e
+      size: 300282499
+    - path: data/dbGaP_combined_file_chunk_43.parquet
+      md5: 54a0d326d7aeecc4bed42f2c4880a87b
+      size: 421548673
+    - path: data/dbGaP_combined_file_chunk_44.parquet
+      md5: fbdd0e63aa0a95ddccbba37725f529ad
+      size: 307237614
+    - path: data/dbGaP_combined_file_chunk_45.parquet
+      md5: cd0e4c528bb7dcd5da8ff7d4a4b9e2ae
+      size: 462544330
+    - path: data/dbGaP_combined_file_chunk_46.parquet
+      md5: d36804a1c6c9c115656b0d1cf4084225
+      size: 301530878
+    - path: data/dbGaP_combined_file_chunk_47.parquet
+      md5: 99280f25fb91b43e1e2b06da206770f6
+      size: 454897943
+    - path: data/dbGaP_combined_file_chunk_48.parquet
+      md5: 88e17076fcb78e29be3a7b0c7b9290d0
+      size: 295564692
+    - path: data/dbGaP_combined_file_chunk_49.parquet
+      md5: 2eac5c49bb6e0f420df437260c616b17
+      size: 473148845
+    - path: data/dbGaP_combined_file_chunk_5.parquet
+      md5: 4992b1dd6e87948d0b0dc18c80d06a53
+      size: 468109447
+    - path: data/dbGaP_combined_file_chunk_50.parquet
+      md5: 66ac6bdae812580a91c6d9b5210809e4
+      size: 315627284
+    - path: data/dbGaP_combined_file_chunk_51.parquet
+      md5: 969877498a79bc305e013a3103c3803d
+      size: 420031425
+    - path: data/dbGaP_combined_file_chunk_52.parquet
+      md5: 8a2082b84a74e93c1f309780485c2289
+      size: 294800055
+    - path: data/dbGaP_combined_file_chunk_53.parquet
+      md5: f24ca46d9e93f3f38f8d3ee96deb1a24
+      size: 409463719
+    - path: data/dbGaP_combined_file_chunk_54.parquet
+      md5: e58664f645ec8e38bec02210f774bce3
+      size: 263088597
+    - path: data/dbGaP_combined_file_chunk_55.parquet
+      md5: 8d548fffa2333935d0b45a4aea6ff4c4
+      size: 380544892
+    - path: data/dbGaP_combined_file_chunk_56.parquet
+      md5: 181858c6dd19b7cd5eb340ad6a440435
+      size: 242301858
+    - path: data/dbGaP_combined_file_chunk_57.parquet
+      md5: e6342cf9473080a220ea0cef05dcebaa
+      size: 372680009
+    - path: data/dbGaP_combined_file_chunk_58.parquet
+      md5: 4194145eca137575d62b661f22a68404
+      size: 286143623
+    - path: data/dbGaP_combined_file_chunk_59.parquet
+      md5: 530fb83fb4011cbbe34b1e2b3f780e46
+      size: 412003091
+    - path: data/dbGaP_combined_file_chunk_6.parquet
+      md5: a29a207db6a967735935fc7b4b8a4e46
+      size: 310129443
+    - path: data/dbGaP_combined_file_chunk_60.parquet
+      md5: 9e9e71b9f444551d55006f16cb8eb183
+      size: 291027366
+    - path: data/dbGaP_combined_file_chunk_61.parquet
+      md5: 56b9015f69ee87ffbc0604f7b9b0890b
+      size: 457175574
+    - path: data/dbGaP_combined_file_chunk_62.parquet
+      md5: 2daa4d26de3bf9b1c0d02031f9873d5f
+      size: 310597981
+    - path: data/dbGaP_combined_file_chunk_63.parquet
+      md5: c5af7bcb779833d6b7abb7d8ab21927d
+      size: 482236666
+    - path: data/dbGaP_combined_file_chunk_64.parquet
+      md5: 1c678e5c36fa560e8e83b22426b89e88
+      size: 311315424
+    - path: data/dbGaP_combined_file_chunk_65.parquet
+      md5: 1a489912c744c9e0d48511b0e30a69e1
+      size: 478488338
+    - path: data/dbGaP_combined_file_chunk_66.parquet
+      md5: fcbdc567fd689d05c6756500c66c8b83
+      size: 309504024
+    - path: data/dbGaP_combined_file_chunk_67.parquet
+      md5: 8d0eef0f3ca1e9c9d1df02f51d3a2fe1
+      size: 479943541
+    - path: data/dbGaP_combined_file_chunk_68.parquet
+      md5: 36d908424a78977064173dddf643a69d
+      size: 307838297
+    - path: data/dbGaP_combined_file_chunk_69.parquet
+      md5: 9330b2fb7923cb8a6931eacf6a73ebc8
+      size: 482528133
+    - path: data/dbGaP_combined_file_chunk_7.parquet
+      md5: 164a0b66774dd709a0ab9e881a9002da
+      size: 474005724
+    - path: data/dbGaP_combined_file_chunk_70.parquet
+      md5: 5a7ab4032c745eec220e5b8cb48f7562
+      size: 309454689
+    - path: data/dbGaP_combined_file_chunk_71.parquet
+      md5: 309215e70d5b5e198fd4ec222e923e08
+      size: 473598677
+    - path: data/dbGaP_combined_file_chunk_72.parquet
+      md5: 380645ba829c18963ef2ce31827a2e4b
+      size: 304724070
+    - path: data/dbGaP_combined_file_chunk_73.parquet
+      md5: 8e507cef85756c3eb90c2f882fca2843
+      size: 436687669
+    - path: data/dbGaP_combined_file_chunk_74.parquet
+      md5: 6d9fd825ce761d10e9f87de50279b28c
+      size: 329211302
+    - path: data/dbGaP_combined_file_chunk_75.parquet
+      md5: 9c8ea8cd8f7c0ad2e2857e0d94bb00b4
+      size: 482296976
+    - path: data/dbGaP_combined_file_chunk_76.parquet
+      md5: 3d0ebe2b2fe314351de037ea194f3e5f
+      size: 303077779
+    - path: data/dbGaP_combined_file_chunk_77.parquet
+      md5: 307e0fd684d470cdf55364c622c6b35a
+      size: 431185988
+    - path: data/dbGaP_combined_file_chunk_78.parquet
+      md5: fe8c7b8e98f1a02e4fc61d2f8c2cbea7
+      size: 297040072
+    - path: data/dbGaP_combined_file_chunk_79.parquet
+      md5: db3dca1e1c377d93330b3db424f4a6d8
+      size: 471681929
+    - path: data/dbGaP_combined_file_chunk_8.parquet
+      md5: a8eed03807b5733f05cc49c7e7a3d318
+      size: 316411735
+    - path: data/dbGaP_combined_file_chunk_80.parquet
+      md5: eff546ed20237976281e33542aa23070
+      size: 301266317
+    - path: data/dbGaP_combined_file_chunk_81.parquet
+      md5: 02117ddb8a348e193867a039ff6196f9
+      size: 409316855
+    - path: data/dbGaP_combined_file_chunk_82.parquet
+      md5: f094e782a4394b53750085cb19df974d
+      size: 261629898
+    - path: data/dbGaP_combined_file_chunk_83.parquet
+      md5: 3ee976c1dfe15a2f6d3dcc7f4e2e3fb6
+      size: 370838344
+    - path: data/dbGaP_combined_file_chunk_84.parquet
+      md5: 4bd258aee9bf0a6b128744299c6863c0
+      size: 258674934
+    - path: data/dbGaP_combined_file_chunk_85.parquet
+      md5: 539b671544b0575626f1422f21dbaf5e
+      size: 399405540
+    - path: data/dbGaP_combined_file_chunk_86.parquet
+      md5: 2d12dae7ce57412df6e76e8200adee00
+      size: 258610931
+    - path: data/dbGaP_combined_file_chunk_87.parquet
+      md5: 30473a583f55200cc591a09668e660a0
+      size: 373969366
+    - path: data/dbGaP_combined_file_chunk_88.parquet
+      md5: d78fa04acb760e8beb3fd90ccd28393c
+      size: 247910313
+    - path: data/dbGaP_combined_file_chunk_89.parquet
+      md5: 40d04c672e337b8b857fea45dc0fe0e8
+      size: 381715310
+    - path: data/dbGaP_combined_file_chunk_9.parquet
+      md5: 0198357e74728f444c6fb3e90329dda2
+      size: 442049633
+    - path: data/dbGaP_combined_file_chunk_90.parquet
+      md5: 2dad9e67089eacc0db1f87167324f51e
+      size: 235403014
+    - path: data/dbGaP_combined_file_chunk_91.parquet
+      md5: be4a35c72e81071349ab6b310cee043e
+      size: 331332141
+    - path: data/dbGaP_combined_file_chunk_92.parquet
+      md5: c3e4bd54c5b8c7e3ddc73938788ed6f9
+      size: 221925130
+    - path: data/dbGaP_combined_file_chunk_93.parquet
+      md5: 5608fb08186d1d3cbc97d9925e454df5
+      size: 355176056
+    - path: data/dbGaP_combined_file_chunk_94.parquet
+      md5: 9a560b44050907792d6bbf2560438b98
+      size: 224308954
+    - path: data/dbGaP_combined_file_chunk_95.parquet
+      md5: 0608916ea6be70e7f57ae63a9e2a92bf
+      size: 378374514
+    - path: data/dbGaP_combined_file_chunk_96.parquet
+      md5: f31ee009c4ccd49ee23990b7d9ea33e2
+      size: 271300115
+    - path: data/dbGaP_combined_file_chunk_97.parquet
+      md5: 6f6848bb5e86d251c453ca855c1f940f
+      size: 408537134
+    - path: data/dbGaP_combined_file_chunk_98.parquet
+      md5: 133a99719c8964450f490e1321401b61
+      size: 238947550
+    - path: data/dbGaP_combined_file_chunk_99.parquet
+      md5: 6040e748bbfab1e24ce46edc75e7917b
+      size: 338465210
+  download:
+    cmd: Rscript R/download.R
+    deps:
+    - path: R/download.R
+      md5: 993c2567e8e873009571a69e4db3644a
+      size: 5696
+    outs:
+    - path: download/
+      md5: 465434e889de2ef46d7b5fdf84a6a006.dir
+      size: 262436172
+      nfiles: 9
+  build:
+    cmd: Rscript R/build.R
+    deps:
+    - path: R/build.R
+      md5: bc22dbfd21791e8c689f1e422484c66e
+      size: 2097
+    outs:
+    - path: data/
+      md5: 0864ad63e2303cd392626b82d8b1a401.dir
+      size: 55119597573
+      nfiles: 159
