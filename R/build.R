@@ -9,7 +9,7 @@ library(parallel)
 library(tools)
 
 ##----------------- Copy combined parquet variant association files to data/ folder
-data_dir='data'
+data_dir='brick'
 download_dir <- "download"
 mkdir = function (dir) {                                                                                                               
   if (!dir.exists(dir)) {                                                                                                              
@@ -39,13 +39,13 @@ combinedOutputPath=file.path(externalDriveLocation |> dir_create('combined_files
 
 
 
-diffDataFiles=setdiff(list.files(combinedOutputPath),list.files('data/'))
+diffDataFiles=setdiff(list.files(combinedOutputPath),list.files(data_dir))
 if(length(diffDataFiles)>0){
   arrow::copy_files(combinedOutputPath,data_dir)
 }
 
 ##----------------- Process txt/tsv data overview files into parquet files in data
-sapply(list.files(file.path(download_dir),pattern='pdf', full.names = TRUE), function(x) fs::file_move(x, file.path("data",basename(x))))
+sapply(list.files(file.path(download_dir),pattern='pdf', full.names = TRUE), function(x) fs::file_move(x, file.path(data_dir,basename(x))))
 process_dbGaP<-function(filename){
   grep(list.files(file.path(download_dir)),pattern='pdf', invert=TRUE, value=TRUE)|>
     map(function(filename) {

@@ -10,4 +10,4 @@ stages:
     deps:
     - R/build.R
     outs:
-    - data/
+    - brick/
