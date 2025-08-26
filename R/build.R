@@ -42,7 +42,7 @@ sapply(list.files(file.path(download_dir),pattern='pdf', full.names = TRUE), fun
 process_dbGaP<-function(filename){
   grep(list.files(file.path(download_dir)),pattern='pdf', invert=TRUE, value=TRUE)|>
     map(function(filename) {
-      df <- vroom::vroom(file.path(download_dir,filename),'\t')
+      df <- vroom::vroom(file.path(download_dir,filename),'\t', locale = locale(encoding = "ISO-8859-1"))
       arrow::write_parquet(df,file.path(data_dir,paste0(basename(checkExt(filename)))))
     })
 }
