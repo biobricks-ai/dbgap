@@ -1,19 +1,18 @@
----
 schema: '2.0'
 stages:
   build:
     cmd: Rscript R/build.R
     deps:
-    - hash: md5
-      md5: 7c0bee8be58593732fc1f18b15b84fd1
-      path: R/build.R
-      size: 2101
+    - path: R/build.R
+      hash: md5
+      md5: 50f0c9f66771ce00d1a09d507a7b4267
+      size: 1904
     outs:
-    - hash: md5
-      md5: 65f77509daf7832f4cab84d0ce306721.dir
+    - path: brick/
+      hash: md5
+      md5: bf3d9427a77306d5e821bd66fec2b7f3.dir
+      size: 23311231
       nfiles: 9
-      path: brick/
-      size: 23311127
   download:
     cmd: Rscript R/download.R
     deps:
