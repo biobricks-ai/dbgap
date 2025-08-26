@@ -28,16 +28,9 @@ checkExt<-function(x) {if(file_ext(x)=='gz'){
   }
   return(tmpFile)
 }
-if (interactive()) {
-  print("Format Example:Folder/to/File/")
-  externalDriveLocation <- readline("Temporary File Storage Location:")
-} else {
-  cat("Temporary File Storage Location:")
-  externalDriveLocation <- readLines("stdin", n = 1)
-}
-combinedOutputPath=file.path(externalDriveLocation |> dir_create('combined_files'))
 
-
+tmpdirPath <- tempdir()
+combinedOutputPath <- dir_create(tmpdirPath, 'combined_files')
 
 diffDataFiles=setdiff(list.files(combinedOutputPath),list.files(data_dir))
 if(length(diffDataFiles)>0){
