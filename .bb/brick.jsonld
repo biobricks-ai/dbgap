@@ -1,0 +1,1561 @@
+{
+  "@context": {
+    "@vocab": "https://brickyard.biobricks.ai/ns#",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "http://schema.org/",
+    "biobricks": "https://biobricks.ai/ns#",
+    "tables": {
+      "@id": "csvw:table",
+      "@container": "@index"
+    },
+    "tableSchema": "csvw:tableSchema",
+    "columns": {
+      "@id": "csvw:column",
+      "@container": "@list"
+    },
+    "columnName": "csvw:name",
+    "datatype": "csvw:datatype",
+    "nullCount": {
+      "@id": "nullCount",
+      "@type": "xsd:integer"
+    },
+    "uniqueCount": {
+      "@id": "uniqueCount",
+      "@type": "xsd:integer"
+    },
+    "columnCount": {
+      "@id": "columnCount",
+      "@type": "xsd:integer"
+    },
+    "sampleValues": {
+      "@id": "sampleValues",
+      "@container": "@list"
+    },
+    "uniqueValues": {
+      "@id": "uniqueValues",
+      "@container": "@list"
+    },
+    "rowCountSample": {
+      "@id": "rowCountSample",
+      "@type": "xsd:integer"
+    },
+    "agenticPriority": {
+      "@id": "agenticPriority",
+      "@type": "xsd:integer"
+    },
+    "agenticPriorityLabel": "agenticPriorityLabel",
+    "readiness": "readiness",
+    "readinessNote": "readinessNote"
+  },
+  "@type": [
+    "dcat:Dataset",
+    "schema:Dataset"
+  ],
+  "@id": "https://brickyard.biobricks.ai/brick/dbgap",
+  "agenticPriority": 2,
+  "agenticPriorityLabel": "low",
+  "dcterms:description": "This BioBrick contains data extracted from dbGaP (Database of Genotypes and Phenotypes), focusing on genotype-phenotype associations. The dataset includes tables linking datasets, analyses, variables, and documents, along with PheGenI data. This data can be used for research exploring genetic contributions to various phenotypes and diseases.",
+  "tables": {
+    "datasetGrouping": {
+      "@type": "csvw:Table",
+      "@id": "https://brickyard.biobricks.ai/brick/dbgap/table/datasetGrouping",
+      "dcterms:description": "This table from the dbGaP database describes the hierarchical organization of datasets within studies, linking specific datasets and their versions to study versions using phs identifiers. It provides dataset names, descriptions, and a multi-level categorization scheme for organizing study results.",
+      "tableSchema": {
+        "@type": "csvw:Schema",
+        "columnCount": 12,
+        "columns": [
+          {
+            "@type": "csvw:Column",
+            "columnName": "phs",
+            "datatype": "Float64",
+            "dcterms:description": "The phs identifier links the dataset grouping to a specific study accession.",
+            "nullCount": 0,
+            "uniqueCount": 6,
+            "sampleValues": [
+              "1.0",
+              "3.0",
+              "4.0",
+              "5.0",
+              "6.0"
+            ],
+            "uniqueValues": [
+              "1.0",
+              "3.0",
+              "4.0",
+              "5.0",
+              "6.0",
+              "7.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "study_version",
+            "datatype": "Float64",
+            "dcterms:description": "The version number of the study associated with the dataset grouping.",
+            "nullCount": 0,
+            "uniqueCount": 3,
+            "sampleValues": [
+              "3.0",
+              "1.0",
+              "1.0",
+              "1.0",
+              "1.0"
+            ],
+            "uniqueValues": [
+              "1.0",
+              "3.0",
+              "30.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "dataset_version",
+            "datatype": "Float64",
+            "dcterms:description": "The version number of the dataset within the study.",
+            "nullCount": 0,
+            "uniqueCount": 4,
+            "sampleValues": [
+              "2.0",
+              "1.0",
+              "1.0",
+              "1.0",
+              "1.0"
+            ],
+            "uniqueValues": [
+              "1.0",
+              "2.0",
+              "3.0",
+              "4.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "dataset",
+            "datatype": "Float64",
+            "dcterms:description": "The dataset identifier within the study.",
+            "nullCount": 0,
+            "uniqueCount": 16,
+            "sampleValues": [
+              "1.0",
+              "3.0",
+              "4.0",
+              "5.0",
+              "7.0"
+            ],
+            "uniqueValues": [
+              "1.0",
+              "3.0",
+              "4.0",
+              "5.0",
+              "7.0",
+              "9.0",
+              "10.0",
+              "11.0",
+              "12.0",
+              "13.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "dataset_name",
+            "datatype": "String",
+            "dcterms:description": "The name of the dataset, providing a concise label for its content.",
+            "nullCount": 0,
+            "uniqueCount": 16,
+            "sampleValues": [
+              "genspecphenotype",
+              "cde_pd",
+              "cde_ctl",
+              "cde_stk",
+              "cde_mnd"
+            ],
+            "uniqueValues": [
+              "ex0_16s",
+              "ex0_14s",
+              "genspecphenotype",
+              "ex0_15s",
+              "ex0_13s",
+              "ex0_11s",
+              "ex0_17s",
+              "cde_pd",
+              "cde_ctl",
+              "ex0_9s"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "dataset_description",
+            "datatype": "String",
+            "dcterms:description": "A description of the dataset, summarizing the data it contains.",
+            "nullCount": 0,
+            "uniqueCount": 16,
+            "sampleValues": [
+              "The data table (n=142 variables) contains AMD and cataract phenotype information, medical history an",
+              "Diagnostics and clinical data elements for subjects with Parkinsonism",
+              "Clinical examination and medical history of neurologically normal subjects. NINDS control, version 1",
+              "Diagnostics, medical history, and clinical examination of subjects affected with cerebrovascular dis",
+              "This table contains ALS phenotype data (n=1790) of the NINDS DNA and Cell Line Repository, which was"
+            ],
+            "uniqueValues": [
+              "Clinic Exam, Original Cohort Exam 13",
+              "Clinic Exam, Original Cohort Exam 12",
+              "Clinic Exam, Original Cohort Exam 14",
+              "Diagnostics, medical history, and clinical examina",
+              "Clinical examination and medical history of neurol",
+              "Clinic Exam, Original Cohort Exam 15",
+              "Clinic Exam, Original Cohort Exam 17",
+              "Clinic Exam, Original Cohort Exams 1 - 7",
+              "Clinic Exam, Original Cohort Exam 9",
+              "The data table (n=142 variables) contains AMD and "
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_1",
+            "datatype": "String",
+            "dcterms:description": "The first level of a hierarchical organization, representing a broad category such as the study name.",
+            "nullCount": 0,
+            "uniqueCount": 6,
+            "sampleValues": [
+              "NEI Age-Related Eye Disease Study (AREDS)",
+              "NINDS Parkinsonism Study",
+              "NINDS Repository Neurologically Normal Control Collection",
+              "NINDS Repository Cerebrovascular Disease/Stroke Study",
+              "NINDS Repository Motor Neuron Disease/ALS Study"
+            ],
+            "uniqueValues": [
+              "NINDS Parkinsonism Study",
+              "NINDS Repository Motor Neuron Disease/ALS Study",
+              "NEI Age-Related Eye Disease Study (AREDS)",
+              "Framingham Cohort",
+              "NINDS Repository Cerebrovascular Disease/Stroke St",
+              "NINDS Repository Neurologically Normal Control Col"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_2",
+            "datatype": "String",
+            "dcterms:description": "The second level of a hierarchical organization, providing a more specific categorization within level 1.",
+            "nullCount": 0,
+            "uniqueCount": 9,
+            "sampleValues": [
+              "AREDS.v3. Datasets",
+              "Cases",
+              "Controls",
+              "NINDS Stroke",
+              "NINDS-ALS Dataset"
+            ],
+            "uniqueValues": [
+              "AREDS.v3. Datasets",
+              "Validated / Reviewed / Scored / Abstracted Data",
+              "Clinic Questionnaire (Interview and Physical Exam)",
+              "NINDS Stroke",
+              "NINDS-ALS Dataset",
+              "Tests",
+              "Lab Work",
+              "Controls",
+              "Cases"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_3",
+            "datatype": "String",
+            "dcterms:description": "The third level of a hierarchical organization, offering further refinement of the data category.",
+            "nullCount": 4,
+            "uniqueCount": 13,
+            "sampleValues": [
+              "Genetic Specimen Subjects",
+              "Exam Dates, Age, Sex",
+              "X-ray",
+              "ECG",
+              "Pulmonary Function Tests"
+            ],
+            "uniqueValues": [
+              "ECG",
+              "Exam Dates, Age, Sex",
+              "Pulmonary Function Tests",
+              "Carbon Monoxide",
+              "Blood",
+              "Echocardiogram",
+              "Bone Study",
+              "Oscillograph/Vasculogram",
+              "Genetic Specimen Subjects",
+              "Clinic Exam Questionnaire"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_4",
+            "datatype": "String",
+            "dcterms:description": "The fourth level of a hierarchical organization, providing the most granular categorization of the data.",
+            "nullCount": 62,
+            "uniqueCount": 5,
+            "sampleValues": [
+              "Metabolic Hormonal",
+              "Hematologic",
+              "Lipids",
+              "MD Interview, Physical Exam, Examiner&apos;s Opinion, and Clinical Diagnostic Impression; Non-MD / N",
+              "Metabolic Hormonal"
+            ],
+            "uniqueValues": [
+              "Lipids",
+              "Hematologic",
+              "None",
+              "MD Interview, Physical Exam, Examiner&apos;s Opini",
+              "Metabolic Hormonal"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_5",
+            "datatype": "String",
+            "dcterms:description": "The fifth level of a hierarchical organization, providing further categorization of the data (if applicable).",
+            "nullCount": 100,
+            "uniqueCount": 1,
+            "uniqueValues": [
+              "None"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_6",
+            "datatype": "String",
+            "dcterms:description": "The sixth level of a hierarchical organization, providing further categorization of the data (if applicable).",
+            "nullCount": 100,
+            "uniqueCount": 1,
+            "uniqueValues": [
+              "None"
+            ]
+          }
+        ],
+        "rowCountSample": 100
+      }
+    },
+    "PheGenIDump.20170814": {
+      "@type": "csvw:Table",
+      "@id": "https://brickyard.biobricks.ai/brick/dbgap/table/PheGenIDump.20170814",
+      "dcterms:description": "This table from dbGaP's PheGenI database contains summary-level results of genome-wide association studies (GWAS) linking SNPs to phenotypic traits, including gene annotations and PubMed IDs for associated publications. The data includes SNP-trait associations, p-values, chromosomal location, and associated gene information.",
+      "tableSchema": {
+        "@type": "csvw:Schema",
+        "columnCount": 19,
+        "columns": [
+          {
+            "@type": "csvw:Column",
+            "columnName": "Source",
+            "datatype": "String",
+            "dcterms:description": "The source database or study from which the SNP-trait association was derived (e.g., gap_analysis).",
+            "nullCount": 0,
+            "uniqueCount": 1,
+            "sampleValues": [
+              "gap_analysis",
+              "gap_analysis",
+              "gap_analysis",
+              "gap_analysis",
+              "gap_analysis"
+            ],
+            "uniqueValues": [
+              "gap_analysis"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "Source Key",
+            "datatype": "Float64",
+            "dcterms:description": "A unique identifier for the specific study or analysis within the source database.",
+            "nullCount": 0,
+            "uniqueCount": 1,
+            "sampleValues": [
+              "1.0",
+              "1.0",
+              "1.0",
+              "1.0",
+              "1.0"
+            ],
+            "uniqueValues": [
+              "1.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "Trait",
+            "datatype": "String",
+            "dcterms:description": "The phenotype or trait associated with the SNP, such as Macular Degeneration.",
+            "nullCount": 0,
+            "uniqueCount": 1,
+            "sampleValues": [
+              "Macular Degeneration",
+              "Macular Degeneration",
+              "Macular Degeneration",
+              "Macular Degeneration",
+              "Macular Degeneration"
+            ],
+            "uniqueValues": [
+              "Macular Degeneration"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "SNP",
+            "datatype": "Float64",
+            "dcterms:description": "The identifier for the single nucleotide polymorphism (SNP) associated with the trait.",
+            "nullCount": 0,
+            "uniqueCount": 96,
+            "sampleValues": [
+              "6003.0",
+              "12677.0",
+              "37539.0",
+              "203674.0",
+              "242849.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "p-value",
+            "datatype": "Float64",
+            "dcterms:description": "The statistical significance of the SNP-trait association, representing the probability of observing the data if there is no true association.",
+            "nullCount": 0,
+            "uniqueCount": 63,
+            "sampleValues": [
+              "3.647555e-09",
+              "3.647555e-09",
+              "1.380885e-05",
+              "1.294992e-25",
+              "1.4385e-05"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "Chr",
+            "datatype": "Float64",
+            "dcterms:description": "The chromosome number on which the SNP is located.",
+            "nullCount": 0,
+            "uniqueCount": 20,
+            "sampleValues": [
+              "1.0",
+              "1.0",
+              "5.0",
+              "1.0",
+              "23.0"
+            ],
+            "uniqueValues": [
+              "1.0",
+              "2.0",
+              "3.0",
+              "4.0",
+              "5.0",
+              "6.0",
+              "7.0",
+              "8.0",
+              "9.0",
+              "10.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "Position",
+            "datatype": "Float64",
+            "dcterms:description": "The genomic position of the SNP on the chromosome, measured in base pairs.",
+            "nullCount": 0,
+            "uniqueCount": 96,
+            "sampleValues": [
+              "197061890.0",
+              "197084242.0",
+              "53883940.0",
+              "196715494.0",
+              "86145539.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "Context",
+            "datatype": "String",
+            "dcterms:description": "The genomic context of the SNP, indicating its location relative to genes and other genomic features (e.g., missense, intron, intergenic).",
+            "nullCount": 0,
+            "uniqueCount": 7,
+            "sampleValues": [
+              "missense",
+              "UTR-3",
+              "intergenic",
+              "intron",
+              "intergenic"
+            ],
+            "uniqueValues": [
+              "nearGene-5",
+              "intron",
+              "UTR-3",
+              "ncRNA",
+              "cds-synon",
+              "missense",
+              "intergenic"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "Pubmed",
+            "datatype": "Float64",
+            "dcterms:description": "The PubMed identifier (PMID) of the publication reporting the SNP-trait association.",
+            "nullCount": 100,
+            "uniqueCount": 1,
+            "uniqueValues": [
+              "None"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "ANALYSIS_NAME",
+            "datatype": "String",
+            "dcterms:description": "The name of the specific analysis performed to identify the SNP-trait association.",
+            "nullCount": 0,
+            "uniqueCount": 1,
+            "sampleValues": [
+              "name",
+              "name",
+              "name",
+              "name",
+              "name"
+            ],
+            "uniqueValues": [
+              "name"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "ANALYSIS_VERSION",
+            "datatype": "Float64",
+            "dcterms:description": "The version number of the analysis used to generate the SNP-trait association data.",
+            "nullCount": 0,
+            "uniqueCount": 1,
+            "sampleValues": [
+              "1.0",
+              "1.0",
+              "1.0",
+              "1.0",
+              "1.0"
+            ],
+            "uniqueValues": [
+              "1.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "GENE1_ID",
+            "datatype": "Float64",
+            "dcterms:description": "The Entrez Gene ID of the first gene associated with the SNP.",
+            "nullCount": 0,
+            "uniqueCount": 75,
+            "sampleValues": [
+              "2165.0",
+              "259266.0",
+              "454.0",
+              "3075.0",
+              "100129298.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "GENE1_NAME",
+            "datatype": "String",
+            "dcterms:description": "The official symbol or name of the first gene associated with the SNP.",
+            "nullCount": 0,
+            "uniqueCount": 75,
+            "sampleValues": [
+              "F13B",
+              "ASPM",
+              "ASS1P9",
+              "CFH",
+              "TPMTP4"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "GENE1_START",
+            "datatype": "Float64",
+            "dcterms:description": "The genomic start position of the first gene associated with the SNP, measured in base pairs.",
+            "nullCount": 0,
+            "uniqueCount": 75,
+            "sampleValues": [
+              "197039191.0",
+              "197084127.0",
+              "53859064.0",
+              "196651878.0",
+              "86128826.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "GENE2_END...15",
+            "datatype": "Float64",
+            "dcterms:description": "The genomic end position of the second gene associated with the SNP, measured in base pairs.",
+            "nullCount": 0,
+            "uniqueCount": 72,
+            "sampleValues": [
+              "197067267.0",
+              "197146694.0",
+              "54310586.0",
+              "196747504.0",
+              "86832602.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "GENE2_ID",
+            "datatype": "Float64",
+            "dcterms:description": "The Entrez Gene ID of the second gene associated with the SNP.",
+            "nullCount": 0,
+            "uniqueCount": 72,
+            "sampleValues": [
+              "2165.0",
+              "259266.0",
+              "54622.0",
+              "3075.0",
+              "117154.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "GENE2_NAME",
+            "datatype": "String",
+            "dcterms:description": "The official symbol or name of the second gene associated with the SNP.",
+            "nullCount": 0,
+            "uniqueCount": 72,
+            "sampleValues": [
+              "F13B",
+              "ASPM",
+              "ARL15",
+              "CFH",
+              "DACH2"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "GENE2_START",
+            "datatype": "Float64",
+            "dcterms:description": "The genomic start position of the second gene associated with the SNP, measured in base pairs.",
+            "nullCount": 0,
+            "uniqueCount": 72,
+            "sampleValues": [
+              "197039191.0",
+              "197084127.0",
+              "53884748.0",
+              "196651878.0",
+              "86148451.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "GENE2_END...19",
+            "datatype": "Float64",
+            "dcterms:description": "The genomic end position of the second gene associated with the SNP, measured in base pairs.",
+            "nullCount": 0,
+            "uniqueCount": 72,
+            "sampleValues": [
+              "197067267.0",
+              "197146694.0",
+              "54310586.0",
+              "196747504.0",
+              "86832602.0"
+            ]
+          }
+        ],
+        "rowCountSample": 100
+      }
+    },
+    "analysisGrouping": {
+      "@type": "csvw:Table",
+      "@id": "https://brickyard.biobricks.ai/brick/dbgap/table/analysisGrouping",
+      "dcterms:description": "The analysisGrouping table from dbGaP provides a hierarchical classification of analyses performed on study data, organized by study version and analysis version. It allows for grouping and categorization of study results based on multiple levels of analysis.",
+      "tableSchema": {
+        "@type": "csvw:Schema",
+        "columnCount": 10,
+        "columns": [
+          {
+            "@type": "csvw:Column",
+            "columnName": "phs",
+            "datatype": "Float64",
+            "dcterms:description": "The phs identifier for the study.",
+            "nullCount": 0,
+            "uniqueCount": 2,
+            "sampleValues": [
+              "1.0",
+              "1.0",
+              "1.0",
+              "7.0",
+              "7.0"
+            ],
+            "uniqueValues": [
+              "1.0",
+              "7.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "study_version",
+            "datatype": "Float64",
+            "dcterms:description": "The version number of the study.",
+            "nullCount": 0,
+            "uniqueCount": 2,
+            "sampleValues": [
+              "3.0",
+              "3.0",
+              "3.0",
+              "30.0",
+              "30.0"
+            ],
+            "uniqueValues": [
+              "3.0",
+              "30.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "analysis",
+            "datatype": "Float64",
+            "dcterms:description": "The analysis identifier.",
+            "nullCount": 0,
+            "uniqueCount": 100,
+            "sampleValues": [
+              "1.0",
+              "2.0",
+              "2856.0",
+              "5.0",
+              "6.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "analysis_version",
+            "datatype": "Float64",
+            "dcterms:description": "The version number of the analysis.",
+            "nullCount": 0,
+            "uniqueCount": 1,
+            "sampleValues": [
+              "1.0",
+              "1.0",
+              "1.0",
+              "1.0",
+              "1.0"
+            ],
+            "uniqueValues": [
+              "1.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_1",
+            "datatype": "String",
+            "dcterms:description": "The first level of analysis grouping, representing a broad study or cohort name.",
+            "nullCount": 0,
+            "uniqueCount": 2,
+            "sampleValues": [
+              "NEI Age-Related Eye Disease Study (AREDS)",
+              "NEI Age-Related Eye Disease Study (AREDS)",
+              "NEI Age-Related Eye Disease Study (AREDS)",
+              "Framingham Cohort",
+              "Framingham Cohort"
+            ],
+            "uniqueValues": [
+              "NEI Age-Related Eye Disease Study (AREDS)",
+              "Framingham Cohort"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_2",
+            "datatype": "String",
+            "dcterms:description": "The second level of analysis grouping, providing a more specific description of the analysis within the study.",
+            "nullCount": 0,
+            "uniqueCount": 4,
+            "sampleValues": [
+              "./Genome-Wide Allelic Association of AMD Status in Illumina 100k Chip <font size=\"+0.5\" color=\"red\">",
+              "Genome-Wide Allelic Association of AMD Status in Affy 100k Chip <font size=\"+0.5\" color=\"red\">(Pre-c",
+              "Genome-Wide Genotypic Association of AMD Status in Illumina Human-1 (100k) Chip <font size=\"+0.5\" co",
+              "Framingham 100K",
+              "Framingham 100K"
+            ],
+            "uniqueValues": [
+              "Genome-Wide Genotypic Association of AMD Status in",
+              "Framingham 100K",
+              "Genome-Wide Allelic Association of AMD Status in A",
+              "./Genome-Wide Allelic Association of AMD Status in"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_3",
+            "datatype": "String",
+            "dcterms:description": "The third level of analysis grouping, further categorizing the analysis, often related to a specific biological system or trait.",
+            "nullCount": 3,
+            "uniqueCount": 3,
+            "sampleValues": [
+              "Pulmonary",
+              "Pulmonary",
+              "Pulmonary",
+              "Pulmonary",
+              "Pulmonary"
+            ],
+            "uniqueValues": [
+              "Metabolic",
+              "None",
+              "Pulmonary"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_4",
+            "datatype": "String",
+            "dcterms:description": "The fourth level of analysis grouping, providing even finer granularity in the analysis categorization, potentially related to specific phenotypes or measurements.",
+            "nullCount": 3,
+            "uniqueCount": 10,
+            "sampleValues": [
+              "Circadian",
+              "Circadian",
+              "Circadian",
+              "Circadian",
+              "Circadian"
+            ],
+            "uniqueValues": [
+              "Circadian",
+              "mean",
+              "Sleepiness",
+              "Adiposity",
+              "singleexam",
+              "None",
+              "longitudinal",
+              "SDB",
+              "ppcrosssectional",
+              "rcrosssectional"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_5",
+            "datatype": "String",
+            "dcterms:description": "The fifth level of analysis grouping, offering a detailed description of the specific variable or analysis being performed.",
+            "nullCount": 3,
+            "uniqueCount": 98,
+            "sampleValues": [
+              "usual weekday bedtime unadjusted (FBAT)bedtime",
+              "usual weekday bedtime unadjusted (GEE)bedtime",
+              "usual weekday bedtime adjusted (FBAT)bedtimeresid",
+              "usual weekday bedtime adjusted (GEE)bedtimeresid",
+              "usual weekday sleep duration unadjusted (FBAT)sleepdur"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_6",
+            "datatype": "String",
+            "dcterms:description": "The sixth level of analysis grouping, providing the most granular level of detail, often including specific adjustments or parameters used in the analysis.",
+            "nullCount": 99,
+            "uniqueCount": 2,
+            "sampleValues": [
+              "adj bmi, offsp 2 &amp; cohort 16 exams (FBAT)allbmi1602"
+            ],
+            "uniqueValues": [
+              "adj bmi, offsp 2 &amp; cohort 16 exams (FBAT)allbm",
+              "None"
+            ]
+          }
+        ],
+        "rowCountSample": 100
+      }
+    },
+    "documentsGrouping": {
+      "@type": "csvw:Table",
+      "@id": "https://brickyard.biobricks.ai/brick/dbgap/table/documentsGrouping",
+      "dcterms:description": "The `documentsGrouping` table in the dbGaP brick organizes study documents by assigning them to hierarchical levels within a study (phs and study version). This table provides a structured way to navigate and categorize study-related documentation.",
+      "tableSchema": {
+        "@type": "csvw:Schema",
+        "columnCount": 11,
+        "columns": [
+          {
+            "@type": "csvw:Column",
+            "columnName": "phs",
+            "datatype": "Float64",
+            "dcterms:description": "The phs identifier of the study.",
+            "nullCount": 0,
+            "uniqueCount": 6,
+            "sampleValues": [
+              "1.0",
+              "1.0",
+              "1.0",
+              "1.0",
+              "1.0"
+            ],
+            "uniqueValues": [
+              "1.0",
+              "3.0",
+              "4.0",
+              "5.0",
+              "6.0",
+              "7.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "study_version",
+            "datatype": "Float64",
+            "dcterms:description": "The version number of the study.",
+            "nullCount": 0,
+            "uniqueCount": 3,
+            "sampleValues": [
+              "3.0",
+              "3.0",
+              "3.0",
+              "3.0",
+              "3.0"
+            ],
+            "uniqueValues": [
+              "1.0",
+              "3.0",
+              "30.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "document",
+            "datatype": "Float64",
+            "dcterms:description": "A unique identifier for the document.",
+            "nullCount": 0,
+            "uniqueCount": 68,
+            "sampleValues": [
+              "1.0",
+              "2.0",
+              "3.0",
+              "4.0",
+              "5.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "document_version",
+            "datatype": "Float64",
+            "dcterms:description": "The version number of the document.",
+            "nullCount": 0,
+            "uniqueCount": 2,
+            "sampleValues": [
+              "1.0",
+              "1.0",
+              "2.0",
+              "1.0",
+              "2.0"
+            ],
+            "uniqueValues": [
+              "1.0",
+              "2.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "document_name",
+            "datatype": "String",
+            "dcterms:description": "The name or title of the document.",
+            "nullCount": 0,
+            "uniqueCount": 62,
+            "sampleValues": [
+              "Chapter 1: BACKGROUND AND RATIONALE",
+              "Chapter 2: LITERATURE REVIEW",
+              "Chapter 3: STUDY DESIGN",
+              "Chapter 4: STUDY RATIONALIZATION",
+              "Chapter 5: STUDY POLICIES"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_1",
+            "datatype": "String",
+            "dcterms:description": "A hierarchical level 1 category for grouping documents, representing a broad study or project name.",
+            "nullCount": 0,
+            "uniqueCount": 6,
+            "sampleValues": [
+              "NEI Age-Related Eye Disease Study (AREDS)",
+              "NEI Age-Related Eye Disease Study (AREDS)",
+              "NEI Age-Related Eye Disease Study (AREDS)",
+              "NEI Age-Related Eye Disease Study (AREDS)",
+              "NEI Age-Related Eye Disease Study (AREDS)"
+            ],
+            "uniqueValues": [
+              "NINDS Repository Motor Neuron Disease/ALS Study",
+              "NEI Age-Related Eye Disease Study (AREDS)",
+              "NINDS Parkinsonism Study",
+              "Framingham Cohort",
+              "NINDS Repository Neurologically Normal Control Col",
+              "NINDS Repository Cerebrovascular Disease/Stroke St"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_2",
+            "datatype": "String",
+            "dcterms:description": "A hierarchical level 2 category for grouping documents, representing a document type or section within a study.",
+            "nullCount": 0,
+            "uniqueCount": 12,
+            "sampleValues": [
+              "Support Documents",
+              "Support Documents",
+              "Support Documents",
+              "Support Documents",
+              "Support Documents"
+            ],
+            "uniqueValues": [
+              "Questionnaire",
+              "Participant Protection Policy",
+              "Support Documents",
+              "Case Report Forms",
+              "Lab Work",
+              "Diagnostic Criteria for Parkinsonism",
+              "Clinic Questionnaire (Interview and Physical Exam)",
+              "System Estimating the Risk of Surgery",
+              "Tests",
+              "Sample Informed Consent Form"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_3",
+            "datatype": "String",
+            "dcterms:description": "A hierarchical level 3 category for grouping documents, providing further specificity within a document type.",
+            "nullCount": 15,
+            "uniqueCount": 14,
+            "sampleValues": [
+              "./Manual of Operations",
+              "Manual of Operations",
+              "Manual of Operations",
+              "Manual of Operations",
+              "Manual of Operations"
+            ],
+            "uniqueValues": [
+              "Reading Center Forms",
+              "Manual of Operations",
+              "Oscillograph/Vasculogram",
+              "Clinic Exam Questionnaire",
+              "Data Use Documents",
+              "Blood",
+              "Clinical Center Forms",
+              "./Manual of Operations",
+              "ECG",
+              "Pulmonary Function Tests"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_4",
+            "datatype": "String",
+            "dcterms:description": "A hierarchical level 4 category for grouping documents, offering a more granular classification.",
+            "nullCount": 63,
+            "uniqueCount": 10,
+            "sampleValues": [
+              "ex0_7s",
+              "ex0_7s",
+              "ex0_7s",
+              "ex0_7s",
+              "Metabolic Hormonal"
+            ],
+            "uniqueValues": [
+              "None",
+              "ex0_7s",
+              "MD Interview, Physical Exam, Examiner&apos;s Opini",
+              "ex0_12s",
+              "Lipids",
+              "ex0_11s",
+              "ex0_10s",
+              "Hematologic",
+              "Metabolic Hormonal",
+              "ex0_13s"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_5",
+            "datatype": "String",
+            "dcterms:description": "A hierarchical level 5 category for grouping documents, providing the most specific classification level available.",
+            "nullCount": 85,
+            "uniqueCount": 5,
+            "sampleValues": [
+              "ex0_7s",
+              "ex0_7s",
+              "ex0_7s",
+              "ex0_7s",
+              "ex0_10s"
+            ],
+            "uniqueValues": [
+              "ex0_12s",
+              "None",
+              "ex0_7s",
+              "ex0_10s",
+              "ex0_11s"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_6",
+            "datatype": "String",
+            "dcterms:description": "A hierarchical level 6 category for grouping documents, representing the lowest level of document classification; all values are 'None'.",
+            "nullCount": 100,
+            "uniqueCount": 1,
+            "uniqueValues": [
+              "None"
+            ]
+          }
+        ],
+        "rowCountSample": 100
+      }
+    },
+    "Analysis_Table_of_Contents": {
+      "@type": "csvw:Table",
+      "@id": "https://brickyard.biobricks.ai/brick/dbgap/table/Analysis_Table_of_Contents",
+      "dcterms:description": "This table from dbGaP provides an index of analysis results submitted to dbGaP, linking specific analysis names and their corresponding result files to the relevant study and analysis accession numbers. It serves as a catalog of study results derived from analyses performed on dbGaP datasets.",
+      "tableSchema": {
+        "@type": "csvw:Schema",
+        "columnCount": 4,
+        "columns": [
+          {
+            "@type": "csvw:Column",
+            "columnName": "phs",
+            "datatype": "Float64",
+            "dcterms:description": "dbGaP study accession number, identifying the study to which the analysis belongs.",
+            "nullCount": 0,
+            "uniqueCount": 4,
+            "sampleValues": [
+              "1.0",
+              "1.0",
+              "89.0",
+              "89.0",
+              "7.0"
+            ],
+            "uniqueValues": [
+              "1.0",
+              "7.0",
+              "89.0",
+              "342.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "pha",
+            "datatype": "Float64",
+            "dcterms:description": "dbGaP analysis accession number, uniquely identifying the analysis within dbGaP.",
+            "nullCount": 0,
+            "uniqueCount": 52,
+            "sampleValues": [
+              "1.0",
+              "2.0",
+              "3.0",
+              "4.0",
+              "5.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "analysis name",
+            "datatype": "String",
+            "dcterms:description": "Name or description of the statistical analysis performed.",
+            "nullCount": 0,
+            "uniqueCount": 28,
+            "sampleValues": [
+              "Genome-Wide Allelic Association of AMD Status in Illumina 100k Chip",
+              "Genome-Wide Allelic Association of AMD Status in Affy100k Chip",
+              "Genome-Wide Genotypic Association of Parkinson Disease in Additive model",
+              "Genome-Wide Genotypic Association of Parkinson Disease",
+              "usual weekday bedtime unadjusted"
+            ],
+            "uniqueValues": [
+              "percent predicted FEF(25-75) at latest exam in 10+",
+              "Genome-Wide Allelic Association of AMD Status in A",
+              "rate of decline of FVC in 10+ packyear smokers",
+              "rate of decline of FEF(25-75)",
+              "rate of decline of FEV1/FVC in 10+ packyear smoker",
+              "percent predicted FEV1 at latest exam",
+              "usual weekday sleep duration adjusted",
+              "Genome-Wide Genotypic Association of Parkinson Dis",
+              "rate of decline of FEF(25-75)/FVC in 10+ packyear ",
+              "rate of decline of FVC"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "analysis result",
+            "datatype": "String",
+            "dcterms:description": "URL or path to the analysis results file.",
+            "nullCount": 0,
+            "uniqueCount": 100,
+            "sampleValues": [
+              "ftp://ftp.ncbi.nlm.nih.gov/dbgap/studies/phs000001/analyses/phs000001.pha000001.txt.gz",
+              "ftp://ftp.ncbi.nlm.nih.gov/dbgap/studies/phs000001/analyses/phs000001.pha000002.txt.gz",
+              "ftp://ftp.ncbi.nlm.nih.gov/dbgap/studies/phs000089/analyses/phs000089.pha000003.txt.gz",
+              "ftp://ftp.ncbi.nlm.nih.gov/dbgap/studies/phs000089/analyses/phs000089.pha000004.txt.gz",
+              "ftp://ftp.ncbi.nlm.nih.gov/dbgap/studies/phs000007/analyses/phs000007.pha000005.txt.gz"
+            ]
+          }
+        ],
+        "rowCountSample": 100
+      }
+    },
+    "variableGrouping": {
+      "@type": "csvw:Table",
+      "@id": "https://brickyard.biobricks.ai/brick/dbgap/table/variableGrouping",
+      "dcterms:description": "The variableGrouping table from dbGaP provides a hierarchical organization of variables within studies, linking variables to studies and versions and describing their relationships within a folder structure. This table contains metadata about study variables, including their names, descriptions, and hierarchical groupings within a study.",
+      "tableSchema": {
+        "@type": "csvw:Schema",
+        "columnCount": 20,
+        "columns": [
+          {
+            "@type": "csvw:Column",
+            "columnName": "phs",
+            "datatype": "Float64",
+            "dcterms:description": "The study accession number and version.",
+            "nullCount": 0,
+            "uniqueCount": 3,
+            "sampleValues": [
+              "1.0",
+              "1.0",
+              "7.0",
+              "7.0",
+              "7.0"
+            ],
+            "uniqueValues": [
+              "1.0",
+              "7.0",
+              "287.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "study_version",
+            "datatype": "Float64",
+            "dcterms:description": "The version of the study.",
+            "nullCount": 0,
+            "uniqueCount": 3,
+            "sampleValues": [
+              "3.0",
+              "3.0",
+              "30.0",
+              "30.0",
+              "30.0"
+            ],
+            "uniqueValues": [
+              "3.0",
+              "6.0",
+              "30.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "study_name",
+            "datatype": "String",
+            "dcterms:description": "The name of the study.",
+            "nullCount": 0,
+            "uniqueCount": 3,
+            "sampleValues": [
+              "National Eye Institute (NEI) Age-Related Eye Disease Study (AREDS)",
+              "National Eye Institute (NEI) Age-Related Eye Disease Study (AREDS)",
+              "Framingham Cohort",
+              "Framingham Cohort",
+              "Framingham Cohort"
+            ],
+            "uniqueValues": [
+              "Cardiovascular Health Study (CHS) Cohort: an NHLBI",
+              "Framingham Cohort",
+              "National Eye Institute (NEI) Age-Related Eye Disea"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "variable_accession",
+            "datatype": "Float64",
+            "dcterms:description": "The accession number for the variable.",
+            "nullCount": 0,
+            "uniqueCount": 57,
+            "sampleValues": [
+              "10.0",
+              "100.0",
+              "1000.0",
+              "1000.0",
+              "1000.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "variable_version",
+            "datatype": "String",
+            "dcterms:description": "The version of the variable.",
+            "nullCount": 0,
+            "uniqueCount": 57,
+            "sampleValues": [
+              "LCORSCORE",
+              "DIAS06",
+              "MF560",
+              "MF560",
+              "MF560"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "variable_name",
+            "datatype": "Float64",
+            "dcterms:description": "The name of the variable.",
+            "nullCount": 0,
+            "uniqueCount": 3,
+            "sampleValues": [
+              "2.0",
+              "2.0",
+              "1.0",
+              "1.0",
+              "1.0"
+            ],
+            "uniqueValues": [
+              "1.0",
+              "2.0",
+              "6.0"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "variable_description",
+            "datatype": "String",
+            "dcterms:description": "A description of the variable.",
+            "nullCount": 0,
+            "uniqueCount": 57,
+            "sampleValues": [
+              "FINAL PREDICTED CORTICAL OPACITY PERCENTAGE: FULL VISIBLE LENS - LEFT EYE (PARTICIPANTS WITH A GENET",
+              "SITTING DIASTOLIC BLOOD PRESSURE AT YEAR 6 (PARTICIPANTS WITH A GENETIC SPECIMEN)",
+              "THYROID EXAMINATION: SCAR PRESENT, EXAM 7",
+              "THYROID EXAMINATION: SCAR PRESENT, EXAM 7",
+              "THYROID EXAMINATION: SCAR PRESENT, EXAM 7"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "parent_folder_label",
+            "datatype": "String",
+            "dcterms:description": "The label of the parent folder containing the variable.",
+            "nullCount": 0,
+            "uniqueCount": 4,
+            "sampleValues": [
+              "genspecphenotype:AREDS.v3 AMD and cataract phenotypes and medical history data (participants with a ",
+              "genspecphenotype:AREDS.v3 AMD and cataract phenotypes and medical history data (participants with a ",
+              "ex0_7s:Clinic Exam, Original Cohort Exams 1 - 7",
+              "ex0_7s:Clinic Exam, Original Cohort Exams 1 - 7",
+              "ex0_7s:Clinic Exam, Original Cohort Exams 1 - 7"
+            ],
+            "uniqueValues": [
+              "ex1_6s:Clinic Exam, Offspring Cohort Exam 6",
+              "genspecphenotype:AREDS.v3 AMD and cataract phenoty",
+              "BASE2:CARe_CHS_BASELINE - Medical History (2)",
+              "ex0_7s:Clinic Exam, Original Cohort Exams 1 - 7"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_1",
+            "datatype": "String",
+            "dcterms:description": "The first level of the variable grouping hierarchy, often representing the study or cohort.",
+            "nullCount": 0,
+            "uniqueCount": 3,
+            "sampleValues": [
+              "NEI Age-Related Eye Disease Study (AREDS)",
+              "NEI Age-Related Eye Disease Study (AREDS)",
+              "Framingham Cohort",
+              "Framingham Cohort",
+              "Framingham Cohort"
+            ],
+            "uniqueValues": [
+              "Framingham Cohort",
+              "NEI Age-Related Eye Disease Study (AREDS)",
+              "Cardiovascular Health Study (CHS) Cohort"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_2",
+            "datatype": "String",
+            "dcterms:description": "The second level of the variable grouping hierarchy, often representing a broad category of data.",
+            "nullCount": 0,
+            "uniqueCount": 6,
+            "sampleValues": [
+              "Eye Disease Phenotypes (Participants w/Genetic Specimen)",
+              "Eye Disease Phenotypes (Participants w/Genetic Specimen)",
+              "Validated / Reviewed / Scored / Abstracted Data",
+              "Tests",
+              "Tests"
+            ],
+            "uniqueValues": [
+              "Validated / Reviewed / Scored / Abstracted Data",
+              "Lab Work",
+              "Tests",
+              "BASE2",
+              "Eye Disease Phenotypes (Participants w/Genetic Spe",
+              "Clinic Questionnaire (Interview and Physical Exam)"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_3",
+            "datatype": "String",
+            "dcterms:description": "The third level of the variable grouping hierarchy, often representing a more specific category of data.",
+            "nullCount": 0,
+            "uniqueCount": 12,
+            "sampleValues": [
+              "Affection Status",
+              "Physical Measurements and Observations",
+              "Exam Dates, Age, Sex",
+              "X-ray",
+              "ECG"
+            ],
+            "uniqueValues": [
+              "Laboratory Tests",
+              "X-ray",
+              "Clinic Exam Questionnaire",
+              "Exam Dates, Age, Sex",
+              "Affection Status",
+              "Carbon Monoxide",
+              "Pulmonary Function Tests",
+              "Urine Chemistries",
+              "Blood",
+              "Physical Measurements and Observations"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_4",
+            "datatype": "String",
+            "dcterms:description": "The fourth level of the variable grouping hierarchy, providing further data categorization.",
+            "nullCount": 1,
+            "uniqueCount": 11,
+            "sampleValues": [
+              "Vital Signs",
+              "ex0_7s",
+              "ex0_7s",
+              "ex0_7s",
+              "ex0_7s"
+            ],
+            "uniqueValues": [
+              "Hematologic",
+              "ex0_7s",
+              "ex1_6s",
+              "Vital Signs",
+              "Urine",
+              "None",
+              "Blood",
+              "Metabolic Hormonal",
+              "Lipids",
+              "MD Interview, Physical Exam, Examiner's Opinion, a"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_5",
+            "datatype": "String",
+            "dcterms:description": "The fifth level of the variable grouping hierarchy, providing even more granular data categorization.",
+            "nullCount": 80,
+            "uniqueCount": 4,
+            "sampleValues": [
+              "Diastolic BP",
+              "ex0_7s",
+              "ex0_7s",
+              "ex0_7s",
+              "ex0_7s"
+            ],
+            "uniqueValues": [
+              "ex0_7s",
+              "None",
+              "ex1_6s",
+              "Diastolic BP"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_6",
+            "datatype": "String",
+            "dcterms:description": "The sixth level of the variable grouping hierarchy, providing further data categorization.",
+            "nullCount": 100,
+            "uniqueCount": 1,
+            "uniqueValues": [
+              "None"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_7",
+            "datatype": "String",
+            "dcterms:description": "The seventh level of the variable grouping hierarchy, providing further data categorization.",
+            "nullCount": 100,
+            "uniqueCount": 1,
+            "uniqueValues": [
+              "None"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_8",
+            "datatype": "String",
+            "dcterms:description": "The eighth level of the variable grouping hierarchy, providing further data categorization.",
+            "nullCount": 100,
+            "uniqueCount": 1,
+            "uniqueValues": [
+              "None"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_9",
+            "datatype": "Boolean",
+            "dcterms:description": "A boolean value representing the ninth level of the variable grouping hierarchy.",
+            "nullCount": 100,
+            "uniqueCount": 1,
+            "uniqueValues": [
+              "None"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_10",
+            "datatype": "Boolean",
+            "dcterms:description": "A boolean value representing the tenth level of the variable grouping hierarchy.",
+            "nullCount": 100,
+            "uniqueCount": 1,
+            "uniqueValues": [
+              "None"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "level_11",
+            "datatype": "Boolean",
+            "dcterms:description": "A boolean value representing the eleventh level of the variable grouping hierarchy.",
+            "nullCount": 100,
+            "uniqueCount": 1,
+            "uniqueValues": [
+              "None"
+            ]
+          },
+          {
+            "@type": "csvw:Column",
+            "columnName": "...20",
+            "datatype": "Boolean",
+            "dcterms:description": "",
+            "nullCount": 100,
+            "uniqueCount": 1,
+            "uniqueValues": [
+              "None"
+            ]
+          }
+        ],
+        "rowCountSample": 100
+      }
+    }
+  },
+  "readiness": "needs_review",
+  "readinessNote": "Metadata has not been reviewed; provenance not documented",
+  "prov:wasEnrichedBy": {
+    "@type": "prov:Activity",
+    "prov:wasAssociatedWith": "BrickYard Metadata Enrichment (Gemini 2.0 Flash)",
+    "prov:endedAtTime": "2026-01-26T02:50:38.771578+00:00"
+  }
+}

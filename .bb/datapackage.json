@@ -1,0 +1,351 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "tables": [
+    {
+      "url": "brick/Analysis_Table_of_Contents.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "phs",
+            "datatype": "string"
+          },
+          {
+            "name": "pha",
+            "datatype": "string"
+          },
+          {
+            "name": "analysis name",
+            "datatype": "string"
+          },
+          {
+            "name": "analysis result",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/PheGenIDump.20170814.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "Source",
+            "datatype": "string"
+          },
+          {
+            "name": "Source Key",
+            "datatype": "string"
+          },
+          {
+            "name": "Trait",
+            "datatype": "string"
+          },
+          {
+            "name": "SNP",
+            "datatype": "string"
+          },
+          {
+            "name": "p-value",
+            "datatype": "string"
+          },
+          {
+            "name": "Chr",
+            "datatype": "string"
+          },
+          {
+            "name": "Position",
+            "datatype": "string"
+          },
+          {
+            "name": "Context",
+            "datatype": "string"
+          },
+          {
+            "name": "Pubmed",
+            "datatype": "string"
+          },
+          {
+            "name": "ANALYSIS_NAME",
+            "datatype": "string"
+          },
+          {
+            "name": "ANALYSIS_VERSION",
+            "datatype": "string"
+          },
+          {
+            "name": "GENE1_ID",
+            "datatype": "string"
+          },
+          {
+            "name": "GENE1_NAME",
+            "datatype": "string"
+          },
+          {
+            "name": "GENE1_START",
+            "datatype": "string"
+          },
+          {
+            "name": "GENE2_END...15",
+            "datatype": "string"
+          },
+          {
+            "name": "GENE2_ID",
+            "datatype": "string"
+          },
+          {
+            "name": "GENE2_NAME",
+            "datatype": "string"
+          },
+          {
+            "name": "GENE2_START",
+            "datatype": "string"
+          },
+          {
+            "name": "GENE2_END...19",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/analysisGrouping.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "phs",
+            "datatype": "string"
+          },
+          {
+            "name": "study_version",
+            "datatype": "string"
+          },
+          {
+            "name": "analysis",
+            "datatype": "string"
+          },
+          {
+            "name": "analysis_version",
+            "datatype": "string"
+          },
+          {
+            "name": "level_1",
+            "datatype": "string"
+          },
+          {
+            "name": "level_2",
+            "datatype": "string"
+          },
+          {
+            "name": "level_3",
+            "datatype": "string"
+          },
+          {
+            "name": "level_4",
+            "datatype": "string"
+          },
+          {
+            "name": "level_5",
+            "datatype": "string"
+          },
+          {
+            "name": "level_6",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/datasetGrouping.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "phs",
+            "datatype": "string"
+          },
+          {
+            "name": "study_version",
+            "datatype": "string"
+          },
+          {
+            "name": "dataset_version",
+            "datatype": "string"
+          },
+          {
+            "name": "dataset",
+            "datatype": "string"
+          },
+          {
+            "name": "dataset_name",
+            "datatype": "string"
+          },
+          {
+            "name": "dataset_description",
+            "datatype": "string"
+          },
+          {
+            "name": "level_1",
+            "datatype": "string"
+          },
+          {
+            "name": "level_2",
+            "datatype": "string"
+          },
+          {
+            "name": "level_3",
+            "datatype": "string"
+          },
+          {
+            "name": "level_4",
+            "datatype": "string"
+          },
+          {
+            "name": "level_5",
+            "datatype": "string"
+          },
+          {
+            "name": "level_6",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/documentsGrouping.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "phs",
+            "datatype": "string"
+          },
+          {
+            "name": "study_version",
+            "datatype": "string"
+          },
+          {
+            "name": "document",
+            "datatype": "string"
+          },
+          {
+            "name": "document_version",
+            "datatype": "string"
+          },
+          {
+            "name": "document_name",
+            "datatype": "string"
+          },
+          {
+            "name": "level_1",
+            "datatype": "string"
+          },
+          {
+            "name": "level_2",
+            "datatype": "string"
+          },
+          {
+            "name": "level_3",
+            "datatype": "string"
+          },
+          {
+            "name": "level_4",
+            "datatype": "string"
+          },
+          {
+            "name": "level_5",
+            "datatype": "string"
+          },
+          {
+            "name": "level_6",
+            "datatype": "string"
+          }
+        ]
+      }
+    },
+    {
+      "url": "brick/variableGrouping.parquet",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "phs",
+            "datatype": "string"
+          },
+          {
+            "name": "study_version",
+            "datatype": "string"
+          },
+          {
+            "name": "study_name",
+            "datatype": "string"
+          },
+          {
+            "name": "variable_accession",
+            "datatype": "string"
+          },
+          {
+            "name": "variable_version",
+            "datatype": "string"
+          },
+          {
+            "name": "variable_name",
+            "datatype": "string"
+          },
+          {
+            "name": "variable_description",
+            "datatype": "string"
+          },
+          {
+            "name": "parent_folder_label",
+            "datatype": "string"
+          },
+          {
+            "name": "level_1",
+            "datatype": "string"
+          },
+          {
+            "name": "level_2",
+            "datatype": "string"
+          },
+          {
+            "name": "level_3",
+            "datatype": "string"
+          },
+          {
+            "name": "level_4",
+            "datatype": "string"
+          },
+          {
+            "name": "level_5",
+            "datatype": "string"
+          },
+          {
+            "name": "level_6",
+            "datatype": "string"
+          },
+          {
+            "name": "level_7",
+            "datatype": "string"
+          },
+          {
+            "name": "level_8",
+            "datatype": "string"
+          },
+          {
+            "name": "level_9",
+            "datatype": "string"
+          },
+          {
+            "name": "level_10",
+            "datatype": "string"
+          },
+          {
+            "name": "level_11",
+            "datatype": "string"
+          },
+          {
+            "name": "...20",
+            "datatype": "string"
+          }
+        ]
+      }
+    }
+  ]
+}

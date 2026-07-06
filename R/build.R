@@ -42,7 +42,13 @@ sapply(list.files(file.path(download_dir),pattern='pdf', full.names = TRUE), fun
 process_dbGaP<-function(filename){
   grep(list.files(file.path(download_dir)),pattern='pdf', invert=TRUE, value=TRUE)|>
     map(function(filename) {
-      df <- vroom::vroom(file.path(download_dir,filename),'\t', locale = locale(encoding = "ISO-8859-1"))
+      # Force all columns to character to avoid readr/vroom type-guessing silently
+      # collapsing sparse columns (e.g. variableGrouping level_9/10/11 + trailing
+      # column) to all-NA logical. Empty fields stay NA; real string values are kept.
+      df <- vroom::vroom(file.path(download_dir,filename),'\t',
+                         locale = locale(encoding = "ISO-8859-1"),
+                         col_types = cols(.default = col_character()),
+                         guess_max = Inf)
       arrow::write_parquet(df,file.path(data_dir,paste0(basename(checkExt(filename)))))
     })
 }

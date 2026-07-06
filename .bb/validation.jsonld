@@ -1,0 +1,534 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@type": "prov:Entity",
+  "schema:name": "dbgap validation report",
+  "prov:generatedAtTime": "2026-07-06T08:52:41Z",
+  "bb:validator": "tools/bb_validate.py",
+  "bb:verdict": "PASS",
+  "bb:summary": {
+    "n_parquet_files": 6,
+    "total_rows": 590277,
+    "total_bytes": 21898615,
+    "note": ""
+  },
+  "bb:deterministic_checks": [
+    {
+      "file": "Analysis_Table_of_Contents.parquet",
+      "path": "dbgap/brick/Analysis_Table_of_Contents.parquet",
+      "rows": 4983,
+      "cols": 4,
+      "bytes": 96269,
+      "columns": [
+        {
+          "name": "phs",
+          "type": "string"
+        },
+        {
+          "name": "pha",
+          "type": "string"
+        },
+        {
+          "name": "analysis name",
+          "type": "string"
+        },
+        {
+          "name": "analysis result",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "phs": 0.0,
+        "pha": 0.0,
+        "analysis name": 0.0,
+        "analysis result": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 4983,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "PheGenIDump.20170814.parquet",
+      "path": "dbgap/brick/PheGenIDump.20170814.parquet",
+      "rows": 136796,
+      "cols": 19,
+      "bytes": 6224240,
+      "columns": [
+        {
+          "name": "Source",
+          "type": "string"
+        },
+        {
+          "name": "Source Key",
+          "type": "string"
+        },
+        {
+          "name": "Trait",
+          "type": "string"
+        },
+        {
+          "name": "SNP",
+          "type": "string"
+        },
+        {
+          "name": "p-value",
+          "type": "string"
+        },
+        {
+          "name": "Chr",
+          "type": "string"
+        },
+        {
+          "name": "Position",
+          "type": "string"
+        },
+        {
+          "name": "Context",
+          "type": "string"
+        },
+        {
+          "name": "Pubmed",
+          "type": "string"
+        },
+        {
+          "name": "ANALYSIS_NAME",
+          "type": "string"
+        },
+        {
+          "name": "ANALYSIS_VERSION",
+          "type": "string"
+        },
+        {
+          "name": "GENE1_ID",
+          "type": "string"
+        },
+        {
+          "name": "GENE1_NAME",
+          "type": "string"
+        },
+        {
+          "name": "GENE1_START",
+          "type": "string"
+        },
+        {
+          "name": "GENE2_END...15",
+          "type": "string"
+        },
+        {
+          "name": "GENE2_ID",
+          "type": "string"
+        },
+        {
+          "name": "GENE2_NAME",
+          "type": "string"
+        },
+        {
+          "name": "GENE2_START",
+          "type": "string"
+        },
+        {
+          "name": "GENE2_END...19",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "Source": 0.0,
+        "Source Key": 0.0,
+        "Trait": 0.0,
+        "SNP": 0.0,
+        "p-value": 0.0,
+        "Chr": 0.0,
+        "Position": 0.0,
+        "Context": 0.0,
+        "Pubmed": 0.40287,
+        "ANALYSIS_NAME": 0.0,
+        "ANALYSIS_VERSION": 0.0,
+        "GENE1_ID": 0.0,
+        "GENE1_NAME": 0.0,
+        "GENE1_START": 0.0,
+        "GENE2_END...15": 0.0,
+        "GENE2_ID": 0.0,
+        "GENE2_NAME": 0.0,
+        "GENE2_START": 0.0,
+        "GENE2_END...19": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 50000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "Source",
+        "ANALYSIS_NAME",
+        "ANALYSIS_VERSION"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "analysisGrouping.parquet",
+      "path": "dbgap/brick/analysisGrouping.parquet",
+      "rows": 7846,
+      "cols": 10,
+      "bytes": 139985,
+      "columns": [
+        {
+          "name": "phs",
+          "type": "string"
+        },
+        {
+          "name": "study_version",
+          "type": "string"
+        },
+        {
+          "name": "analysis",
+          "type": "string"
+        },
+        {
+          "name": "analysis_version",
+          "type": "string"
+        },
+        {
+          "name": "level_1",
+          "type": "string"
+        },
+        {
+          "name": "level_2",
+          "type": "string"
+        },
+        {
+          "name": "level_3",
+          "type": "string"
+        },
+        {
+          "name": "level_4",
+          "type": "string"
+        },
+        {
+          "name": "level_5",
+          "type": "string"
+        },
+        {
+          "name": "level_6",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "phs": 0.0,
+        "study_version": 0.0,
+        "analysis": 0.0,
+        "analysis_version": 0.0,
+        "level_1": 0.0,
+        "level_2": 0.0,
+        "level_3": 0.026765,
+        "level_4": 0.162121,
+        "level_5": 0.256691,
+        "level_6": 0.669386
+      },
+      "all_null_columns": [],
+      "sample_rows": 7846,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "analysis_version"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "datasetGrouping.parquet",
+      "path": "dbgap/brick/datasetGrouping.parquet",
+      "rows": 8394,
+      "cols": 12,
+      "bytes": 785718,
+      "columns": [
+        {
+          "name": "phs",
+          "type": "string"
+        },
+        {
+          "name": "study_version",
+          "type": "string"
+        },
+        {
+          "name": "dataset_version",
+          "type": "string"
+        },
+        {
+          "name": "dataset",
+          "type": "string"
+        },
+        {
+          "name": "dataset_name",
+          "type": "string"
+        },
+        {
+          "name": "dataset_description",
+          "type": "string"
+        },
+        {
+          "name": "level_1",
+          "type": "string"
+        },
+        {
+          "name": "level_2",
+          "type": "string"
+        },
+        {
+          "name": "level_3",
+          "type": "string"
+        },
+        {
+          "name": "level_4",
+          "type": "string"
+        },
+        {
+          "name": "level_5",
+          "type": "string"
+        },
+        {
+          "name": "level_6",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "phs": 0.0,
+        "study_version": 0.0,
+        "dataset_version": 0.0,
+        "dataset": 0.0,
+        "dataset_name": 0.000238,
+        "dataset_description": 0.001906,
+        "level_1": 0.000477,
+        "level_2": 0.000477,
+        "level_3": 0.7061,
+        "level_4": 0.860972,
+        "level_5": 0.961758,
+        "level_6": 0.982726
+      },
+      "all_null_columns": [],
+      "sample_rows": 8394,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "documentsGrouping.parquet",
+      "path": "dbgap/brick/documentsGrouping.parquet",
+      "rows": 7557,
+      "cols": 11,
+      "bytes": 209676,
+      "columns": [
+        {
+          "name": "phs",
+          "type": "string"
+        },
+        {
+          "name": "study_version",
+          "type": "string"
+        },
+        {
+          "name": "document",
+          "type": "string"
+        },
+        {
+          "name": "document_version",
+          "type": "string"
+        },
+        {
+          "name": "document_name",
+          "type": "string"
+        },
+        {
+          "name": "level_1",
+          "type": "string"
+        },
+        {
+          "name": "level_2",
+          "type": "string"
+        },
+        {
+          "name": "level_3",
+          "type": "string"
+        },
+        {
+          "name": "level_4",
+          "type": "string"
+        },
+        {
+          "name": "level_5",
+          "type": "string"
+        },
+        {
+          "name": "level_6",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "phs": 0.0,
+        "study_version": 0.0,
+        "document": 0.0,
+        "document_version": 0.0,
+        "document_name": 0.0,
+        "level_1": 0.0,
+        "level_2": 0.0,
+        "level_3": 0.455207,
+        "level_4": 0.602223,
+        "level_5": 0.848088,
+        "level_6": 0.983591
+      },
+      "all_null_columns": [],
+      "sample_rows": 7557,
+      "sample_dup_fraction": 0.0013,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "variableGrouping.parquet",
+      "path": "dbgap/brick/variableGrouping.parquet",
+      "rows": 424701,
+      "cols": 20,
+      "bytes": 14442727,
+      "columns": [
+        {
+          "name": "phs",
+          "type": "string"
+        },
+        {
+          "name": "study_version",
+          "type": "string"
+        },
+        {
+          "name": "study_name",
+          "type": "string"
+        },
+        {
+          "name": "variable_accession",
+          "type": "string"
+        },
+        {
+          "name": "variable_version",
+          "type": "string"
+        },
+        {
+          "name": "variable_name",
+          "type": "string"
+        },
+        {
+          "name": "variable_description",
+          "type": "string"
+        },
+        {
+          "name": "parent_folder_label",
+          "type": "string"
+        },
+        {
+          "name": "level_1",
+          "type": "string"
+        },
+        {
+          "name": "level_2",
+          "type": "string"
+        },
+        {
+          "name": "level_3",
+          "type": "string"
+        },
+        {
+          "name": "level_4",
+          "type": "string"
+        },
+        {
+          "name": "level_5",
+          "type": "string"
+        },
+        {
+          "name": "level_6",
+          "type": "string"
+        },
+        {
+          "name": "level_7",
+          "type": "string"
+        },
+        {
+          "name": "level_8",
+          "type": "string"
+        },
+        {
+          "name": "level_9",
+          "type": "string"
+        },
+        {
+          "name": "level_10",
+          "type": "string"
+        },
+        {
+          "name": "level_11",
+          "type": "string"
+        },
+        {
+          "name": "...20",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "phs": 0.0,
+        "study_version": 0.0,
+        "study_name": 0.0,
+        "variable_accession": 0.0,
+        "variable_version": 0.001295,
+        "variable_name": 0.001293,
+        "variable_description": 0.001297,
+        "parent_folder_label": 0.001293,
+        "level_1": 0.002585,
+        "level_2": 0.002585,
+        "level_3": 0.067702,
+        "level_4": 0.212064,
+        "level_5": 0.62924,
+        "level_6": 0.860231,
+        "level_7": 0.920106,
+        "level_8": 0.962421,
+        "level_9": 0.990188,
+        "level_10": 0.998823,
+        "level_11": 0.999819,
+        "...20": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 50000,
+      "sample_dup_fraction": 0.001,
+      "sample_constant_columns": [
+        "level_11",
+        "...20"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    }
+  ],
+  "bb:datapackage_conformance": {
+    "issues": [],
+    "conforms": true
+  },
+  "bb:web_validation": {
+    "checked": "2026-07-06",
+    "verdict": "PASS",
+    "defect": "readr/vroom default type-guessing silently mis-typed sparse columns in R/build.R (vroom() with no col_types). In variableGrouping.parquet, columns level_9, level_10, level_11 and the trailing unnamed column (vroom-named '...20') were guessed as logical and NA-collapsed to bool@null_fraction=1.0, destroying all their values. The same guessing also coerced numeric-looking columns (phs, study_version, variable_accession, variable_name) to double, silently NA-ing every non-numeric value (e.g. variable_name entries like 'SUBJID','CONSENT'; 549-581 rows per column).",
+    "fix": "R/build.R vroom::vroom() call now passes col_types = cols(.default = col_character()) and guess_max = Inf, so all columns are read as character (empty -> NA, real strings preserved).",
+    "recovered": {
+      "variableGrouping.parquet": {
+        "level_9": "4167 string values recovered (was bool all-null)",
+        "level_10": "500 string values recovered (was bool all-null)",
+        "level_11": "77 string values recovered (was bool all-null)",
+        "...20": "16 string values recovered (trailing unnamed column, was bool all-null)",
+        "phs": "549 non-numeric values recovered (was double)",
+        "variable_accession": "581 non-numeric values recovered (was double)",
+        "variable_name": "549 non-numeric values recovered (was double)",
+        "study_version": "549 non-numeric values recovered (was double)"
+      }
+    },
+    "regeneration": "Nix dev-shell broken on ws4 (nix-hdt 404) and vroom/arrow unavailable to system R (4.3.3), so brick parquet was regenerated with pyarrow/pandas faithfully replicating the corrected vroom semantics (tab sep, ISO-8859-1, quote='\"', escape_double, na=c('','NA'), trim_ws, name_repair='unique' -> '...N', trailing ragged footer rows dropped, all columns cast to string). Faithfulness verified against the pre-fix DVC-cached parquet: identical row counts, column names and all string-column values across all 6 tables; the only value differences are the intended recoveries above. R source fix committed for future Rscript rebuilds.",
+    "note": "bb_validate.py reports null_fraction 0.0 for column '...20' due to a validator artifact (col.path_in_schema.split('.')[0] mangles the vroom '...N' name); the parquet itself correctly stores null_fraction 0.99996 (16 non-null of 424701). Data is correct; only the validator's summary field is affected."
+  }
+}
