@@ -1,0 +1,35 @@
+{
+  "@context": "../../context/source.context.jsonld",
+  "@type": "dcat:Dataset",
+  "@id": "https://biobricks.ai/bricks/dbgap",
+  "dcterms:title": "dbGaP - database of Genotypes and Phenotypes (public overview and grouping tables)",
+  "dcterms:description": "Parquet tables built from the PUBLIC, non-controlled-access overview files distributed on the NIH/NCBI dbGaP FTP: study/dataset/analysis/variable/document grouping tables, the Analysis Table of Contents, data-model PDFs, and the PheGenI (Phenotype-Genotype Integrator) dump. These describe how dbGaP studies and their result datasets are organized and provide SNP-trait associations; they do NOT contain controlled-access individual-level genotype/phenotype data. Sourced from https://ftp.ncbi.nlm.nih.gov/dbgap/.",
+  "dcterms:license": "https://www.usa.gov/government-works",
+  "biobricks:licenseName": "US Government Work / public domain (NCBI places no restrictions; attribution requested)",
+  "biobricks:licenseClass": "open",
+  "biobricks:merckCommercialUse": "permitted",
+  "biobricks:licenseEvidence": [
+    {
+      "source": "R/download.R",
+      "quote": "dbgap <- 'https://ftp.ncbi.nlm.nih.gov/dbgap/studies/'  ... documentationPdfs=\"https://ftp.ncbi.nlm.nih.gov/dbgap/DataModels/\" ... dataGrouping=\"https://ftp.ncbi.nlm.nih.gov/dbgap/Groupings/\" ... pheGeneData=\"https://ftp.ncbi.nlm.nih.gov/dbgap/PheGenI/PheGenIDump.20170814.txt\"",
+      "confidence": "high"
+    },
+    {
+      "source": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
+      "quote": "Information that is created by or for the US government on this site is within the public domain ... may be freely distributed and copied. ... NCBI itself places no restrictions on the use or distribution of the data contained therein.",
+      "confidence": "high"
+    }
+  ],
+  "biobricks:reviewed": false,
+  "biobricks:reviewNotes": "Determined by the BioBricks licensing-annotation agent (Claude). The download stage retrieves ONLY the public dbGaP overview/grouping tables and PheGenI dump from the open NCBI FTP tree (ftp.ncbi.nlm.nih.gov/dbgap/), NOT controlled-access individual-level data (which would require an NIH Data Access Request / DUA). NCBI content created by/for the US government is public domain and NCBI places no restrictions on redistribution => open / permitted, with attribution to NLM/NCBI requested. HUMAN REVIEWER MUST confirm: (1) that no controlled-access dbGaP file was pulled into this brick, and (2) note NCBI's caveat that some original submitters may claim IP rights on specific submissions; PheGenI/GWAS association content aggregated from publications should be spot-checked.",
+  "prov:wasDerivedFrom": [
+    {
+      "@type": "dcat:Dataset",
+      "@id": "https://www.ncbi.nlm.nih.gov/gap/",
+      "dcterms:title": "dbGaP - database of Genotypes and Phenotypes (public overview/grouping files and PheGenI)",
+      "dcterms:license": "https://www.usa.gov/government-works",
+      "dcat:downloadURL": "https://ftp.ncbi.nlm.nih.gov/dbgap/",
+      "dcterms:publisher": "National Center for Biotechnology Information (NCBI), NIH"
+    }
+  ]
+}
